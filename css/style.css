@@ -1,0 +1,30 @@
+/* VARIABLES */
+:root {
+  /*colors variables */
+  --button-enter: hsl(221, 44%, 41%);
+  --button-create: hsl(109, 63%, 44%);
+  --a-color: rgb(24,161,246); 
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*======================================*/
+
+.fb_logo {
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  min-width: 300px;
+  height: 106px;
+}
+
+.description p {
+  font-family: 'Roboto';
+}
