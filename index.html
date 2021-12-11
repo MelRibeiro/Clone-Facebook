@@ -25,8 +25,8 @@
     </div>
     <div class="login">
       <div class="sign-in">
-        <input type="email" placeholder="Email ou telefone">
-        <input type="password" placeholder="Senha">
+        <input class='email' type="email" placeholder="Email ou telefone">
+        <input class='pass' type="password" placeholder="Senha">
         <button class="button-in">Entrar</button> <!-- IN because of sign-IN -->
         <a class='password' href="#">Esqueceu a senha?</a>
       </div>
@@ -34,7 +34,7 @@
       <hr>
 
       <div class="sign-up">
-        <button class="button-up">Criar nova conta</button>
+        <button class="button-up" onclick="createNew()">Criar nova conta</button>
       </div>
     </div>
   </main>
@@ -44,6 +44,29 @@
     <p><a href="#">Criar uma Página</a> para uma celebridade, uma marca ou uma empresa.</p>
   </div>
   </footer>
+
   
+  <div id="modal" class="modal-container">
+    <div class="modal-style">
+      <h3>Cadastre-se</h3>
+      <p>É rápido e fácil.</p>
+      <form action="#" class="form">
+        <div class="user-inf">
+          <input type="text" placeholder="Nome">
+          <input type="text" placeholder="Sobrenome">
+          <input type="email" placeholder="Celular ou email">
+          <input type="password" placeholder="Nova senha">
+        </div>
+        <div class="bord">
+          <label for="#">Data de Nascimento</label>
+          <select name="" id="idDay"></select>
+          <select name="" id="idMonth"></select>
+          <select name="" id="select"></select>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
