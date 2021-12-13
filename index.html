@@ -1,72 +1,137 @@
 <!DOCTYPE html>
 <html lang="  pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conecte-se a amigos, familiares e colegas. Crie seu perfil hoje! Crie Eventos. Partilhe fotos. Veja amigos. Chat Online. Eventos. Encontre Amigos. Jogue com os Seus Amigos.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conecte-se a amigos, familiares e colegas. Crie seu perfil hoje! Crie Eventos. Partilhe fotos. Veja amigos. Chat Online. Eventos. Encontre Amigos. Jogue com os Seus Amigos."
+    />
 
-  <!--Link CSS-->
-  <link rel="stylesheet" href="css/style.css">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!--Font-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="shortcut icon" href="img/facebook-brands.svg">
-  <title>Facebook</title>
-</head>
-<body>
-  <main class="container">
-    <div class="fb_logo">
-      <img class='logo'src="img/facebook.svg" alt="logo facebook">
-      <h2 class='description'>O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</h2>
-    </div>
-    <div class="login">
-      <div class="sign-in">
-        <input class='email' type="email" placeholder="Email ou telefone">
-        <input class='pass' type="password" placeholder="Senha">
-        <button class="button-in">Entrar</button> <!-- IN because of sign-IN -->
-        <a class='password' href="#">Esqueceu a senha?</a>
+    <link rel="shortcut icon" href="img/facebook-brands.svg" />
+    <title>Facebook</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="fb_logo">
+        <img class="logo" src="img/facebook.svg" alt="logo facebook" />
+        <h2 class="description">
+          O Facebook ajuda você a se conectar e compartilhar com as pessoas que
+          fazem parte da sua vida.
+        </h2>
       </div>
+      <div class="login">
+        <div class="sign-in">
+          <input class="email" type="email" placeholder="Email ou telefone" />
+          <input class="pass" type="password" placeholder="Senha" />
+          <button class="button-in">Entrar</button>
+          <!-- IN because of sign-IN -->
+          <a class="password" href="#">Esqueceu a senha?</a>
+        </div>
 
-      <hr>
+        <hr />
 
-      <div class="sign-up">
-        <button class="button-up" onclick="createNew()">Criar nova conta</button>
+        <div class="sign-up">
+          <button class="button-up">Criar nova conta</button>
+        </div>
+
+        <div class="footer">
+          <p>
+            <a href="#">Criar uma Página</a> para uma celebridade, uma marca ou
+            uma empresa.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div id="modal" class="modal-container">
+      <div class="modal-style">
+        <div class="modal-inf">
+          <button class="close">X</button>
+          <h3>Cadastre-se</h3>
+          <p>É rápido e fácil.</p>
+        </div>
+
+        <hr />
+
+        <form action="#" class="form">
+          <div class="user-inf">
+            <div>
+              <input class="form-input" type="text" placeholder="Nome" />
+              <input class="form-input" type="text" placeholder="Sobrenome" />
+            </div>
+            <input
+              class="form-input_dif"
+              type="email"
+              placeholder="Celular ou email"
+            />
+            <input
+              class="form-input_dif"
+              type="password"
+              placeholder="Nova senha"
+            />
+          </div>
+          <div class="bord">
+            <label for="#"
+              >Data de Nascimento <i class="fas fa-question-circle question"></i
+            ></label>
+            <div class="option-select">
+              <select class="select" name="" id="idDay"></select>
+              <select class="select" name="" id="idMonth"></select>
+              <select class="select" name="" id="select"></select>
+            </div>
+          </div>
+          <div class="radio-button">      
+              <label for=""
+                >Genero <i class="fas fa-question-circle question"></i
+              ></label>
+            <div id="genders">
+            <div class="genders">
+              <p>Feminino</p>
+              <input type="radio" />
+            </div>
+            <div class="genders">
+             
+              <p>Masculino</p>
+              <input type="radio" />
+            </div>
+            <div class="genders">
+              <p>Personalizado</p>
+              <input type="radio" />
+            </div>
+          </div>
+        </div>        
+          <p class="dados">
+            Ao clicar em Cadastre-se, você concorda com nossos
+            <a href="#">Termos</a>, <a href="">Política de Dados</a> e
+            <a href="">Política de Cookies.</a>Você poderá receber notificações
+            por SMS e cancelar isso quando quiser.
+          </p>
+          <div class="center-btn">
+          <button class="button-modal">Cadastrar-se</button>
+        </div>
+        </form>
       </div>
     </div>
-  </main>
 
-  <footer>
-  <div class="footer">
-    <p><a href="#">Criar uma Página</a> para uma celebridade, uma marca ou uma empresa.</p>
-  </div>
-  </footer>
-
-  
-  <div id="modal" class="modal-container">
-    <div class="modal-style">
-      <h3>Cadastre-se</h3>
-      <p>É rápido e fácil.</p>
-      <form action="#" class="form">
-        <div class="user-inf">
-          <input type="text" placeholder="Nome">
-          <input type="text" placeholder="Sobrenome">
-          <input type="email" placeholder="Celular ou email">
-          <input type="password" placeholder="Nova senha">
-        </div>
-        <div class="bord">
-          <label for="#">Data de Nascimento</label>
-          <select name="" id="idDay"></select>
-          <select name="" id="idMonth"></select>
-          <select name="" id="select"></select>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script src="./js/main.js"></script>
-</body>
+    <script src="./js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8fc257dc80.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+
+<!--<i class="fas fa-exclamation-circle"></i>-->

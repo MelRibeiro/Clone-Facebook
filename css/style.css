@@ -23,7 +23,7 @@
 
 hr {
   border: none;
-  width: 22.75rem;
+  min-width: 22.75rem;
   height: 1px;
   background-color: var(--hr-color);
   margin: 0 auto;
@@ -51,8 +51,8 @@ body {
 
 .logo {
   width: 100%;
-  min-width: 18.75rem;
-  height: 6.625rem;
+  max-width: 18.75rem;
+  max-height: 6.625rem;
 }
 
 .description {
@@ -66,8 +66,8 @@ body {
 
 .login {
   margin: 0 auto;
-  width: 24.75rem;
-  height: 19.688rem;
+  max-width: 24.75rem;
+  max-height: 20rem;
   padding-top: 0.625rem;
   padding-bottom: 1.5rem;
   background: #fff;
@@ -132,7 +132,6 @@ input:focus {
 
 .button-up {
   margin-top: 1rem;
-  margin-bottom: 2.5rem;
   width: 10.438rem;
   height: 3rem;
   font-size: 1rem;
@@ -151,27 +150,220 @@ input:focus {
   margin-top: 1.75rem;
 }
 
-footer p {
+.footer p {
   margin: 0 auto;
   max-width: 24.75rem;
   font-size: 0.9rem;
   text-align: center;
 }
 
-footer p a {
+.footer p a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
 }
 
-footer p a:hover {
+.footer p a:hover {
   text-decoration: underline;
 }
 
 
-@media screen and (width: 960px) {
-  main .container {
-    display: flex;
+/*========================================================================================*/
+/*SIGN UP MODAL */
+
+#modal {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-style {
+  background: #fff;
+  border-radius: 0.5rem;
+  width: 30%;
+  min-width: 24rem;
+  height: auto;
+  position: relative;
+}
+
+.modal-inf {
+  padding: 0.625rem 1rem;
+}
+
+.modal-inf h3 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+}
+.modal-inf p {
+  font-size: 0.9rem;
+}
+
+.form {
+  padding: 1rem;
+}
+
+.user-inf {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input, .form-input_dif, .select {
+  padding: 0.688rem;
+  margin: 0.312rem;
+  min-height: 2.5rem;
+  border-radius: 0.5rem;
+  outline: 0;
+  border: 1px solid hsl(216, 8%, 88%);
+  background: hsl(210, 11%, 96%);
+}
+
+.form-input {
+  min-width: 12.125rem;
+}
+
+.form-input_dif {
+  min-width: 22rem;
+}
+
+.form-input:focus, .form-input_dif:focus {
+  background: hsl(210, 11%, 96%);
+}
+
+
+.bord label, .radio-button label, .dados {
+  font-size: 0.75rem;
+  color: hsl(214, 8%, 41%);
+  margin-left: 0.312rem;
+}
+
+.option-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select {
+  width: 7.813rem;
+  height: 2.25rem;
+}
+
+.question {
+  cursor: pointer;
+}
+
+/* GENDERS */
+#genders {
+  display: flex;
+}
+
+.genders {
+  display: flex;
+  height: 36px;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.7rem 0 0.3rem;
+  border: 1px solid hsl(216, 8%, 88%);
+  border-radius: 0.4rem;
+}
+
+.genders:nth-child(2) {
+  margin-left: 0.7rem;
+}
+
+.genders:nth-child(3) {
+  margin-left: 0.7rem;
+}
+
+.genders > p {
+  font-size: 0.9rem;
+}
+
+.dados {
+  margin: 0.6rem 0 0.6rem 0;
+}
+
+.dados > a {
+  color: hsl(220, 46%, 41%);
+  text-decoration: none;
+}
+
+.dados > a:hover {
+  text-decoration: underline;
+}
+
+.center-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-modal {
+  background-color: var(--button-create);
+  outline: 0;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  width: 12.125rem;
+  height: 2.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
   }
 
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.show .modal-style {
+  animation: modal .6s;
+  
+}
+
+.close {
+  font-family: Helvetica, Arial, sans-serif;
+  color: hsl(0, 0%, 27%);
+  font-size: 1rem;
+  font-weight: bold;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.modal-container.show {
+  display: flex;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin: 4.5rem 11rem 7rem 11rem;
+  }
 }
