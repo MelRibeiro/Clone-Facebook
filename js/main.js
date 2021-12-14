@@ -66,3 +66,38 @@ function startModal (modalID) {
 
 const buttonSignUp = document.querySelector('.button-up')
 buttonSignUp.addEventListener('click', () => startModal('modal'))
+
+
+function startSection (sectionID) {
+  const section = document.getElementById(sectionID)
+  
+  if (section) {
+    section.classList.add('show-two')
+    section.addEventListener('mouseover', (event) => {
+      console.log(event.target)
+      if (event.target.id == sectionID ) {
+        section.classList.remove('show-two')
+      } 
+    })
+  }
+}
+
+const questionBirthday = document.querySelector('.question')
+questionBirthday.addEventListener('click', () => startSection('section'))
+
+
+function startSectionGender (sectionG) {
+  const section = document.getElementById(sectionG)
+ 
+    section.classList.add('show-three')
+    section.addEventListener('mouseover', (event) => {
+      console.log(event.target)
+      if (event.target.id == sectionG) {
+        section.classList.remove('show-three')
+      } 
+    })
+  }
+
+
+const questionGenders = document.querySelector('.gender')
+questionGenders.addEventListener('click', () => startSectionGender('gender-one'))

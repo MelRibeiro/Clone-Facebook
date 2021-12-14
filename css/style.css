@@ -83,7 +83,7 @@ body {
 }
 
 .sign-in input, .button-in {
-  width: 22.75rem;
+  min-width: 19rem;
   height: 3rem;
   border-radius: 0.5rem;
 }
@@ -358,6 +358,76 @@ input:focus {
   display: flex;
 }
 
+/* MOUSEOUT */
+
+
+.section {
+  background: #fff;
+  border: 1px solid hsl(216, 8%, 88%);
+  font-size: 0.813rem;
+  line-height: 1rem;
+  width: 20%;
+  padding: 0.75rem;
+  color: hsl(220, 3%, 41%);
+  box-shadow: 0 0.75rem 1.75rem 0 rgb(0 0 0 / 20%);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  transform: translateY(160%);
+  z-index: 2001;
+}
+
+.section.section-one {
+  left: 20%;
+  transform: translateY(230%);
+}
+
+.relative {
+  position: relative;
+}
+
+
+.grey {
+  font-weight: bold;
+}
+
+.section a {
+  color: hsl(214, 89%, 63%);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+.section.show-two {
+  display: flex;
+  animation: show-two 0.6s;
+}
+
+.section.show-three{
+  display: flex;
+  animation: show-two 0.6s;
+}
+
+@keyframes show-two {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
 @media screen and (min-width: 1024px) {
   .container {
     display: flex;
@@ -365,5 +435,9 @@ input:focus {
     justify-content: center;
     height: 50vh;
     margin: 4.5rem 11rem 7rem 11rem;
+  }
+
+  .sign-in input, .button-in {
+    width: 22.75rem;
   }
 }
