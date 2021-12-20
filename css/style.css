@@ -211,6 +211,10 @@ input:focus {
 .form {
   padding: 1rem;
 }
+.form input:focus:required:invalid {
+  border: 1px solid red;
+}
+
 
 .user-inf {
   display: flex;
@@ -320,6 +324,12 @@ input:focus {
   font-weight: bold;
 }
 
+.button-modal:hover {
+  background: linear-gradient(hsl(108, 35%, 51%), hsl(103, 34%, 40%));
+  background-color: hsl(102, 36%, 48%);
+  box-shadow: inset 0 1px 1px hsl(102, 62%, 71%);
+  border-color: hsl(100, 53%, 28%) hsl(100, 53%, 28%) hsl(97, 59%, 20%);
+}
 
 @keyframes modal {
   from {
@@ -366,7 +376,7 @@ input:focus {
   border: 1px solid hsl(216, 8%, 88%);
   font-size: 0.813rem;
   line-height: 1rem;
-  width: 20%;
+  width: 30%;
   padding: 0.75rem;
   color: hsl(220, 3%, 41%);
   box-shadow: 0 0.75rem 1.75rem 0 rgb(0 0 0 / 20%);
@@ -374,13 +384,13 @@ input:focus {
   position: fixed;
   top: 0;
   left: 20%;
-  transform: translateY(160%);
+  transform: translateY(80%); 
   z-index: 2001;
 }
 
 .section.section-one {
   left: 20%;
-  transform: translateY(230%);
+  transform: translateY(80%);
 }
 
 .relative {
@@ -428,7 +438,7 @@ input:focus {
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 999px) {
   .container {
     display: flex;
     align-items: center;
@@ -439,5 +449,9 @@ input:focus {
 
   .sign-in input, .button-in {
     width: 22.75rem;
+  }
+
+  .section {
+    width: 20%;
   }
 }

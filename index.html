@@ -68,27 +68,29 @@
         <form action="#" class="form">
           <div class="user-inf">
             <div>
-              <input class="form-input" type="text" placeholder="Nome" />
-              <input class="form-input" type="text" placeholder="Sobrenome" />
+              <input class="form-input" type="text" placeholder="Nome" required />
+              <input class="form-input" type="text" placeholder="Sobrenome" required />
             </div>
             <input
               class="form-input_dif"
               type="email"
               placeholder="Celular ou email"
+              required
             />
             <input
               class="form-input_dif"
               type="password"
               placeholder="Nova senha"
+              required
             />
           </div>
           <div class="bord">
             <label for="#">Data de Nascimento <i class="fas fa-question-circle question"></i
             ></label>
             <div class="option-select">
-              <select class="select" name="" id="idDay"></select>
-              <select class="select" name="" id="idMonth"></select>
-              <select class="select" name="" id="select"></select>
+              <select class="select" name="" id="idDay" required></select>
+              <select class="select" name="" id="idMonth" required></select>
+              <select class="select" name="" id="select" required></select>
             </div>
           </div>
           <div class="radio-button">      
@@ -143,4 +145,4 @@
   </body>
 </html>
 
-<!--<i class="fas fa-exclamation-circle"></i>-->
+
