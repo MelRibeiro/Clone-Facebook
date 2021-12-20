@@ -23,7 +23,7 @@
 
 hr {
   border: none;
-  min-width: 22.75rem;
+  width: auto;
   height: 1px;
   background-color: var(--hr-color);
   margin: 0 auto;
